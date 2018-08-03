@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-
-function Context({ context }) {
+import { createPlayers } from "../store.js";
+function Context({ context, createPlayers }) {
   return (
     <div>
       <h1>{context}</h1>
@@ -15,7 +15,14 @@ function Context({ context }) {
           placeholder="Nr of players"
         />
       </div>
-      <button className="btn">Start game</button>
+      <button
+        className="btn"
+        onClick={() => {
+          createPlayers(new Array(10).fill("random"));
+        }}
+      >
+        Start game
+      </button>
     </div>
   );
 }
@@ -24,4 +31,11 @@ function mapStateToProps(state) {
   return { context: state.context };
 }
 
-export default connect(mapStateToProps)(Context);
+function mapDispatchToProps(dispatch) {
+  return { createPlayers: players => dispatch(createPlayers(players)) };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Context);

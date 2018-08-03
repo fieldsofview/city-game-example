@@ -81,12 +81,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__("react-redux");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_redux__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__store_js__ = __webpack_require__("./store.js");
 var _jsxFileName = "/Users/rnegash/Documents/testprojects/with-redux-test/pages/session-setup.js";
 
 
 
+
 function Context(_ref) {
-  var context = _ref.context;
+  var context = _ref.context,
+      createPlayers = _ref.createPlayers;
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
@@ -120,6 +123,9 @@ function Context(_ref) {
     }
   })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", {
     className: "btn",
+    onClick: function onClick() {
+      createPlayers(new Array(10).fill("random"));
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18
@@ -133,7 +139,80 @@ function mapStateToProps(state) {
   };
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["connect"])(mapStateToProps)(Context));
+function mapDispatchToProps(dispatch) {
+  return {
+    createPlayers: function createPlayers(players) {
+      return dispatch(Object(__WEBPACK_IMPORTED_MODULE_2__store_js__["a" /* createPlayers */])(players));
+    }
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["connect"])(mapStateToProps, mapDispatchToProps)(Context));
+
+/***/ }),
+
+/***/ "./store.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export SET_CONTEXT */
+/* unused harmony export CREATE_PLAYERS */
+/* unused harmony export reducer */
+/* harmony export (immutable) */ __webpack_exports__["f"] = setContext;
+/* harmony export (immutable) */ __webpack_exports__["a"] = createPlayers;
+/* harmony export (immutable) */ __webpack_exports__["d"] = initializeStore;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__("redux");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_redux__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension__ = __webpack_require__("redux-devtools-extension");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux_thunk__ = __webpack_require__("redux-thunk");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux_thunk___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_redux_thunk__);
+
+
+
+var initialState = {
+  context: null,
+  players: []
+};
+var SET_CONTEXT = "SET_CONTEXT";
+var CREATE_PLAYERS = "CREATE_PLAYERS"; // REDUCERS
+
+var reducer = function reducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case SET_CONTEXT:
+      return Object.assign({}, state, {
+        context: action.context
+      });
+
+    case CREATE_PLAYERS:
+      return Object.assign({}, state, {
+        players: action.players
+      });
+
+    default:
+      return state;
+  }
+}; // ACTIONS
+
+function setContext(context) {
+  return {
+    type: SET_CONTEXT,
+    context: context
+  };
+}
+function createPlayers(players) {
+  return {
+    type: CREATE_PLAYERS,
+    players: players
+  };
+}
+function initializeStore() {
+  var initialState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  return Object(__WEBPACK_IMPORTED_MODULE_0_redux__["createStore"])(reducer, initialState, Object(__WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension__["composeWithDevTools"])(Object(__WEBPACK_IMPORTED_MODULE_0_redux__["applyMiddleware"])(__WEBPACK_IMPORTED_MODULE_2_redux_thunk___default.a)));
+}
 
 /***/ }),
 
@@ -156,6 +235,27 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-redux");
+
+/***/ }),
+
+/***/ "redux":
+/***/ (function(module, exports) {
+
+module.exports = require("redux");
+
+/***/ }),
+
+/***/ "redux-devtools-extension":
+/***/ (function(module, exports) {
+
+module.exports = require("redux-devtools-extension");
+
+/***/ }),
+
+/***/ "redux-thunk":
+/***/ (function(module, exports) {
+
+module.exports = require("redux-thunk");
 
 /***/ })
 

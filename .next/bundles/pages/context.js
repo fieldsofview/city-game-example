@@ -3161,7 +3161,7 @@ function Context(_ref) {
 function mapDispatchToProps(dispatch) {
   return {
     setContext: function setContext(context) {
-      return dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__store_js__["b" /* setContext */])(context));
+      return dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__store_js__["f" /* setContext */])(context));
     }
   };
 }
@@ -3194,9 +3194,11 @@ function mapDispatchToProps(dispatch) {
 
 "use strict";
 /* unused harmony export SET_CONTEXT */
+/* unused harmony export CREATE_PLAYERS */
 /* unused harmony export reducer */
-/* harmony export (immutable) */ __webpack_exports__["b"] = setContext;
-/* harmony export (immutable) */ __webpack_exports__["a"] = initializeStore;
+/* harmony export (immutable) */ __webpack_exports__["f"] = setContext;
+/* harmony export (immutable) */ __webpack_exports__["a"] = createPlayers;
+/* harmony export (immutable) */ __webpack_exports__["d"] = initializeStore;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__("./node_modules/redux/es/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension__ = __webpack_require__("./node_modules/redux-devtools-extension/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension__);
@@ -3205,9 +3207,11 @@ function mapDispatchToProps(dispatch) {
 
 
 var initialState = {
-  context: null
+  context: null,
+  players: []
 };
-var SET_CONTEXT = "SET_CONTEXT"; // REDUCERS
+var SET_CONTEXT = "SET_CONTEXT";
+var CREATE_PLAYERS = "CREATE_PLAYERS"; // REDUCERS
 
 var reducer = function reducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -3219,6 +3223,11 @@ var reducer = function reducer() {
         context: action.context
       });
 
+    case CREATE_PLAYERS:
+      return Object.assign({}, state, {
+        players: action.players
+      });
+
     default:
       return state;
   }
@@ -3228,6 +3237,12 @@ function setContext(context) {
   return {
     type: SET_CONTEXT,
     context: context
+  };
+}
+function createPlayers(players) {
+  return {
+    type: CREATE_PLAYERS,
+    players: players
   };
 }
 function initializeStore() {

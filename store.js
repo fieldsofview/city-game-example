@@ -3,10 +3,12 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import thunkMiddleware from "redux-thunk";
 
 const initialState = {
-  context: null
+  context: null,
+  players: []
 };
 
 export const SET_CONTEXT = "SET_CONTEXT";
+export const CREATE_PLAYERS = "CREATE_PLAYERS";
 
 // REDUCERS
 export const reducer = (state = initialState, action) => {
@@ -14,6 +16,10 @@ export const reducer = (state = initialState, action) => {
     case SET_CONTEXT:
       return Object.assign({}, state, {
         context: action.context
+      });
+    case CREATE_PLAYERS:
+      return Object.assign({}, state, {
+        players: action.players
       });
     default:
       return state;
@@ -24,6 +30,9 @@ export const reducer = (state = initialState, action) => {
 
 export function setContext(context) {
   return { type: SET_CONTEXT, context };
+}
+export function createPlayers(players) {
+  return { type: CREATE_PLAYERS, players };
 }
 
 export function initializeStore(initialState = initialState) {

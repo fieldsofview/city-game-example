@@ -45,12 +45,12 @@ var __NEXT_REDUX_STORE__ = '__NEXT_REDUX_STORE__';
 function getOrCreateStore(initialState) {
   // Always make a new store if server, otherwise state is shared between requests
   if (isServer) {
-    return Object(__WEBPACK_IMPORTED_MODULE_2__store__["a" /* initializeStore */])(initialState);
+    return Object(__WEBPACK_IMPORTED_MODULE_2__store__["d" /* initializeStore */])(initialState);
   } // Create store if unavailable on the client and set it on the window object
 
 
   if (!window[__NEXT_REDUX_STORE__]) {
-    window[__NEXT_REDUX_STORE__] = Object(__WEBPACK_IMPORTED_MODULE_2__store__["a" /* initializeStore */])(initialState);
+    window[__NEXT_REDUX_STORE__] = Object(__WEBPACK_IMPORTED_MODULE_2__store__["d" /* initializeStore */])(initialState);
   }
 
   return window[__NEXT_REDUX_STORE__];
@@ -2730,9 +2730,11 @@ function (_App) {
 
 "use strict";
 /* unused harmony export SET_CONTEXT */
+/* unused harmony export CREATE_PLAYERS */
 /* unused harmony export reducer */
-/* harmony export (immutable) */ __webpack_exports__["b"] = setContext;
-/* harmony export (immutable) */ __webpack_exports__["a"] = initializeStore;
+/* harmony export (immutable) */ __webpack_exports__["f"] = setContext;
+/* harmony export (immutable) */ __webpack_exports__["a"] = createPlayers;
+/* harmony export (immutable) */ __webpack_exports__["d"] = initializeStore;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__("./node_modules/redux/es/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension__ = __webpack_require__("./node_modules/redux-devtools-extension/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension__);
@@ -2741,9 +2743,11 @@ function (_App) {
 
 
 var initialState = {
-  context: null
+  context: null,
+  players: []
 };
-var SET_CONTEXT = "SET_CONTEXT"; // REDUCERS
+var SET_CONTEXT = "SET_CONTEXT";
+var CREATE_PLAYERS = "CREATE_PLAYERS"; // REDUCERS
 
 var reducer = function reducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -2755,6 +2759,11 @@ var reducer = function reducer() {
         context: action.context
       });
 
+    case CREATE_PLAYERS:
+      return Object.assign({}, state, {
+        players: action.players
+      });
+
     default:
       return state;
   }
@@ -2764,6 +2773,12 @@ function setContext(context) {
   return {
     type: SET_CONTEXT,
     context: context
+  };
+}
+function createPlayers(players) {
+  return {
+    type: CREATE_PLAYERS,
+    players: players
   };
 }
 function initializeStore() {
