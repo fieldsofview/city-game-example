@@ -1,3 +1,5 @@
 cd into directory
-do npm install
-npm run dev
+
+'npm install' in terminal
+
+'npm run dev' in terminal
