@@ -2261,48 +2261,67 @@ var _jsxFileName = "/Users/rnegash/Documents/testprojects/with-redux-test/pages/
 function Context(_ref) {
   var context = _ref.context,
       createPlayers = _ref.createPlayers;
+  var styles = {
+    btnLogin: {
+      float: "right"
+    }
+  };
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 13
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "columns",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "column col-8 col-mx-auto",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h4", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 16
     }
   }, "Context selected: ", context), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "form-group",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 17
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", {
     className: "form-label",
     htmlFor: "input-example-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 18
     }
   }, "Nr of players"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+    min: "0",
     className: "form-input",
     type: "number",
     placeholder: "Eg. 5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 21
     }
   })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", {
     className: "btn",
+    style: styles.btnLogin,
     onClick: function onClick() {
       createPlayers(new Array(10).fill("random"));
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 28
     }
-  }, "Start game"));
+  }, "Start game"))));
 }
 
 function mapStateToProps(state) {
