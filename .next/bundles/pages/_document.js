@@ -1734,20 +1734,30 @@ function (_Document) {
           fileName: _jsxFileName,
           lineNumber: 17
         }
-      })), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("body", {
+      }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("link", {
+        rel: "stylesheet",
+        href: "../css/custom.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 18
         }
-      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_document__["Main"], {
+      })), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("body", {
+        style: {
+          padding: "2em 1em"
+        },
         __source: {
           fileName: _jsxFileName,
           lineNumber: 20
         }
-      }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_document__["NextScript"], {
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_document__["Main"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 21
+        }
+      }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_document__["NextScript"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22
         }
       })));
     }

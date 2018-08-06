@@ -3,6 +3,45 @@ __NEXT_REGISTER_PAGE('/context', function() {
           var comp =
       webpackJsonp([6],{
 
+/***/ "./components/Header.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _jsxFileName = "/Users/rnegash/Documents/testprojects/with-redux-test/components/Header.js";
+
+
+var Header = function Header() {
+  var styles = {
+    marginBottom: "50px"
+  };
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "columns",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "column col-4 col-mx-auto login",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
+    className: "text-center",
+    style: styles,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    }
+  }, "City game")));
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (Header);
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/core-js/json/stringify.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3112,7 +3151,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_link__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_redux__ = __webpack_require__("./node_modules/react-redux/es/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__store_js__ = __webpack_require__("./store.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Header_js__ = __webpack_require__("./components/Header.js");
 var _jsxFileName = "/Users/rnegash/Documents/testprojects/with-redux-test/pages/context.js";
+
 
 
 
@@ -3120,48 +3161,92 @@ var _jsxFileName = "/Users/rnegash/Documents/testprojects/with-redux-test/pages/
 
 function Context(_ref) {
   var setContext = _ref.setContext;
+  var styles = {
+    btnContainer: {
+      height: "150px",
+      marginBottom: "50px"
+    },
+    btnStyle: {
+      width: "100%",
+      height: "100%"
+    }
+  };
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 18
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Header_js__["a" /* default */], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "columns",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "column col-4 col-mx-auto",
+    style: styles.btnContainer,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
     href: "/session-setup",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 23
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", {
     className: "btn",
     onClick: function onClick() {
       return setContext("india");
     },
+    style: styles.btnStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 24
     }
-  }, "choose ind")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
+  }, "India")))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "columns",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "column col-4 col-mx-auto",
+    style: styles.btnContainer,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
     href: "/session-setup",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 36
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", {
     className: "btn",
     onClick: function onClick() {
       return setContext("netherlands");
     },
+    style: styles.btnStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 37
     }
-  }, "choose neth")));
+  }, "Netherlands")))));
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     setContext: function setContext(context) {
-      return dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__store_js__["f" /* setContext */])(context));
+      return dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__store_js__["c" /* setContext */])(context));
     }
   };
 }
@@ -3196,9 +3281,9 @@ function mapDispatchToProps(dispatch) {
 /* unused harmony export SET_CONTEXT */
 /* unused harmony export CREATE_PLAYERS */
 /* unused harmony export reducer */
-/* harmony export (immutable) */ __webpack_exports__["f"] = setContext;
+/* harmony export (immutable) */ __webpack_exports__["c"] = setContext;
 /* harmony export (immutable) */ __webpack_exports__["a"] = createPlayers;
-/* harmony export (immutable) */ __webpack_exports__["d"] = initializeStore;
+/* harmony export (immutable) */ __webpack_exports__["b"] = initializeStore;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__("./node_modules/redux/es/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension__ = __webpack_require__("./node_modules/redux-devtools-extension/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension__);

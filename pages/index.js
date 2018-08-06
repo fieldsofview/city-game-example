@@ -1,25 +1,41 @@
 import React from "react";
 import { connect } from "react-redux";
-import { startClock, serverRenderClock } from "../store";
-import Examples from "../components/examples";
 import Link from "next/link";
+import Header from "../components/Header.js";
 
 function Index({ context }) {
+  const styles = {
+    btnLogin: {
+      float: "right"
+    }
+  };
   return (
     <div className="container">
+      <Header />
+
       <div className="columns">
-        <div className="column col-4 col-mx-auto login">
+        <div className="column col-4 col-mx-auto">
           <div className="form-group">
             <label className="form-label" htmlFor="input-example-1">
-              email {context}
+              Email:
             </label>
-            <input className="form-input" type="email" placeholder="email" />
+            <input
+              className="form-input"
+              type="email"
+              placeholder="Eg. example@example.com"
+            />
+          </div>
+          <div className="form-group">
             <label className="form-label" htmlFor="input-example-1">
-              pw
+              Password:
             </label>
-            <input className="form-input" type="password" placeholder="pw" />
+            <input className="form-input" type="password" />
+          </div>
+          <div className="form-group">
             <Link href="/context">
-              <button className="btn">login</button>
+              <button className="btn" style={styles.btnLogin}>
+                Login
+              </button>
             </Link>
           </div>
         </div>

@@ -15,8 +15,9 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <link rel="stylesheet" href="/_next/static/style.css" />
+          <link rel="stylesheet" href="../css/custom.css" />
         </Head>
-        <body>
+        <body style={{ padding: "2em 1em" }}>
           <Main />
           <NextScript />
         </body>

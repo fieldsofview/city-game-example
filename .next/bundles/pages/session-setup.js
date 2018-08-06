@@ -2307,9 +2307,9 @@ function mapDispatchToProps(dispatch) {
 /* unused harmony export SET_CONTEXT */
 /* unused harmony export CREATE_PLAYERS */
 /* unused harmony export reducer */
-/* harmony export (immutable) */ __webpack_exports__["f"] = setContext;
+/* harmony export (immutable) */ __webpack_exports__["c"] = setContext;
 /* harmony export (immutable) */ __webpack_exports__["a"] = createPlayers;
-/* harmony export (immutable) */ __webpack_exports__["d"] = initializeStore;
+/* harmony export (immutable) */ __webpack_exports__["b"] = initializeStore;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__("./node_modules/redux/es/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension__ = __webpack_require__("./node_modules/redux-devtools-extension/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension__);

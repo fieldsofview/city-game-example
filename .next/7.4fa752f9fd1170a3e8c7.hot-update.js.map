@@ -1,1 +1,0 @@
-{"version":3,"file":"7.4fa752f9fd1170a3e8c7.hot-update.js","sources":["webpack:///pages/session-setup.js"],"sourcesContent":["import React from \"react\";\n\nexport default () => <div>nr of players:</div>;\n\n\n\n// WEBPACK FOOTER //\n// pages/session-setup.js"],"mappings":";;;;;;;;;;AAAA;AAEA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;;;;;;;;;;;;;;;;;;;;;A","sourceRoot":""}
