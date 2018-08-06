@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import Link from "next/link";
-import Header from "../components/Header.js";
 
 function Index({ context }) {
   const styles = {
@@ -11,8 +10,6 @@ function Index({ context }) {
   };
   return (
     <div className="container">
-      <Header />
-
       <div className="columns">
         <div className="column col-4 col-mx-auto">
           <div className="form-group">

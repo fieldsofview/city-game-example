@@ -153,29 +153,24 @@ function Context(_ref) {
       fileName: _jsxFileName,
       lineNumber: 23
     }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Header_js__["a" /* default */], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "columns",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 24
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "column col-4 col-mx-auto",
     style: styles.btnContainer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 25
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
     href: "/session-setup",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 26
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", {
     className: "btn",
@@ -185,26 +180,26 @@ function Context(_ref) {
     style: styles.btnStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 27
     }
   }, contexts.in)))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "columns",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 37
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "column col-4 col-mx-auto",
     style: styles.btnContainer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 38
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
     href: "/session-setup",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 39
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", {
     className: "btn",
@@ -214,7 +209,7 @@ function Context(_ref) {
     style: styles.btnStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 40
     }
   }, contexts.nl)))));
 }

@@ -6,8 +6,6 @@ import Header from "../components/Header.js";
 function Context({ context, createPlayers }) {
   return (
     <div className="container">
-      <Header />
-
       <h4>Context selected: {context}</h4>
       <div className="form-group">
         <label className="form-label" htmlFor="input-example-1">

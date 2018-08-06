@@ -1,4 +1,5 @@
 import Document, { Head, Main, NextScript } from "next/document";
+import Header from "../components/Header.js";
 
 import "spectre.css/dist/spectre.min.css";
 //import "spectre.css/dist/spectre-exp.min.css";
@@ -18,6 +19,8 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" href="../css/custom.css" />
         </Head>
         <body style={{ padding: "2em 1em" }}>
+          <Header />
+
           <Main />
           <NextScript />
         </body>

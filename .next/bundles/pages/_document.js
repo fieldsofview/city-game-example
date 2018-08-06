@@ -3,6 +3,45 @@ __NEXT_REGISTER_PAGE('/_document', function() {
           var comp =
       webpackJsonp([2],{
 
+/***/ "./components/Header.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _jsxFileName = "/Users/rnegash/Documents/testprojects/with-redux-test/components/Header.js";
+
+
+var Header = function Header() {
+  var styles = {
+    marginBottom: "50px"
+  };
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "columns",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: "column col-4 col-mx-auto login",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
+    className: "text-center",
+    style: styles,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    }
+  }, "City game")));
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (Header);
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/extends.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1670,10 +1709,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_document__ = __webpack_require__("./node_modules/next/document.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_document___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_next_document__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_spectre_css_dist_spectre_min_css__ = __webpack_require__("./node_modules/spectre.css/dist/spectre.min.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_spectre_css_dist_spectre_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_spectre_css_dist_spectre_min_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_spectre_css_dist_spectre_icons_min_css__ = __webpack_require__("./node_modules/spectre.css/dist/spectre-icons.min.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_spectre_css_dist_spectre_icons_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_spectre_css_dist_spectre_icons_min_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Header_js__ = __webpack_require__("./components/Header.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_spectre_css_dist_spectre_min_css__ = __webpack_require__("./node_modules/spectre.css/dist/spectre.min.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_spectre_css_dist_spectre_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_spectre_css_dist_spectre_min_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_spectre_css_dist_spectre_icons_min_css__ = __webpack_require__("./node_modules/spectre.css/dist/spectre-icons.min.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_spectre_css_dist_spectre_icons_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_spectre_css_dist_spectre_icons_min_css__);
 
 var _jsxFileName = "/Users/rnegash/Documents/testprojects/with-redux-test/pages/_document.js";
 
@@ -1699,6 +1739,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 
+
  //import "spectre.css/dist/spectre-exp.min.css";
 
 
@@ -1720,26 +1761,26 @@ function (_Document) {
       return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("html", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
+          lineNumber: 16
         }
       }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_document__["Head"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 17
         }
       }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("link", {
         rel: "stylesheet",
         href: "/_next/static/style.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 18
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("link", {
         rel: "stylesheet",
         href: "../css/custom.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 19
         }
       })), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("body", {
         style: {
@@ -1747,17 +1788,22 @@ function (_Document) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 21
         }
-      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_document__["Main"], {
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Header_js__["a" /* default */], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 22
+        }
+      }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_document__["Main"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_document__["NextScript"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 25
         }
       })));
     }

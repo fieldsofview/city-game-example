@@ -21,8 +21,6 @@ function Context({ setContext }) {
   };
   return (
     <div className="container">
-      <Header />
-
       <div className="columns">
         <div className="column col-4 col-mx-auto" style={styles.btnContainer}>
           <Link href="/session-setup">
