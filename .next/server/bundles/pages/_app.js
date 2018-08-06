@@ -82,7 +82,7 @@ module.exports =
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__store__ = __webpack_require__("./store.js");
 
-var _jsxFileName = "/Users/rnegash/Documents/testprojects/with-redux-test/lib/with-redux-store.js";
+var _jsxFileName = "/Users/rnegash/Documents/gitprojects/with-redux-test/lib/with-redux-store.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -221,7 +221,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lib_with_redux_store__ = __webpack_require__("./lib/with-redux-store.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_redux__ = __webpack_require__("react-redux");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_redux__);
-var _jsxFileName = "/Users/rnegash/Documents/testprojects/with-redux-test/pages/_app.js";
+var _jsxFileName = "/Users/rnegash/Documents/gitprojects/with-redux-test/pages/_app.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -296,7 +296,7 @@ function (_App) {
 /* unused harmony export SET_CONTEXT */
 /* unused harmony export CREATE_PLAYERS */
 /* unused harmony export reducer */
-/* harmony export (immutable) */ __webpack_exports__["c"] = setContext;
+/* unused harmony export setContext */
 /* harmony export (immutable) */ __webpack_exports__["a"] = createPlayers;
 /* harmony export (immutable) */ __webpack_exports__["b"] = initializeStore;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__("redux");

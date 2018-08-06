@@ -1,7 +1,7 @@
 module.exports =
 __NEXT_REGISTER_PAGE('/session-setup', function() {
           var comp =
-      webpackJsonp([7],{
+      webpackJsonp([5],{
 
 /***/ "./components/Header.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -9,7 +9,7 @@ __NEXT_REGISTER_PAGE('/session-setup', function() {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _jsxFileName = "/Users/rnegash/Documents/testprojects/with-redux-test/components/Header.js";
+var _jsxFileName = "/Users/rnegash/Documents/gitprojects/with-redux-test/components/Header.js";
 
 
 var Header = function Header() {
@@ -39,6 +39,73 @@ var Header = function Header() {
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (Header);
+
+/***/ }),
+
+/***/ "./js/data.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+ //This is a realistic person generator
+//This program creates persons and allows you to create links between
+//categories
+//import functions
+
+var generateEntity = __webpack_require__("./js/entity-generator.js").generateEntity; //Data for generating a person
+
+
+var ageGroups = ["Child", "Youth", "Adult", "Senior"]; //[0] in the following categories lets you set
+//certain attributes as appliable to only selected ageGroup(s)
+//* means appliable to all ageGroups
+
+var races = [["*", "Indian"], ["*", "Chinese"], ["*", "Japanese"], ["*", "European"], ["*", "African"], ["*", "Latin"]];
+var religions = [["*", "Hindu"], ["*", "Muslim"], ["*", "Christian"], ["*", "Buddhist"], ["*", "Atheist"], ["*", "Agnostic"]];
+var dailyOccupations = [["Adult", "Cook"], ["Adult", "School teacher"], ["Youth Adult", "Rickshaw driver"], ["Senior Youth Adult", "Artist"], ["Youth", "High school student"], ["Child", "Kindergarten"], ["*", "Street dweller"], ["Adult", "Software developer"], ["Senior", "Retiree"]];
+var categories = [races, religions, dailyOccupations];
+var randomIndex = Math.floor(Math.random() * ageGroups.length);
+var ageGroup = ageGroups[randomIndex];
+
+module.exports = function generatePersona(nrOfPersonas) {
+  var personas = new Array(nrOfPersonas);
+
+  for (var i = 0; i < personas.length; i++) {
+    personas[i] = generateEntity(ageGroup, categories);
+  }
+
+  return personas;
+}; //Example output
+//Youth [ 'Chinese', 'Muslim', 'Street dweller' ]
+
+/***/ }),
+
+/***/ "./js/entity-generator.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+ //Takes specified ageGroup (String) and all categories (Array)
+
+function generateEntity(ageGroup, categories) {
+  var entity = new Array(categories.length - 1);
+
+  for (var i = 0; i < categories.length; i++) {
+    entity[i] = generateAttribute(ageGroup, categories[i]);
+  }
+
+  return entity;
+}
+
+function generateAttribute(key, arr) {
+  var possibleAttributes = arr.filter(function (arr) {
+    return arr[0].includes(key) || arr[0] == "*";
+  });
+  var randomIndex = Math.floor(Math.random() * possibleAttributes.length);
+  var attribute = possibleAttributes[randomIndex][1];
+  return attribute;
+}
+
+module.exports = {
+  generateEntity: generateEntity
+};
 
 /***/ }),
 
@@ -2252,7 +2319,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__("./node_modules/react-redux/es/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__store_js__ = __webpack_require__("./store.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Header_js__ = __webpack_require__("./components/Header.js");
-var _jsxFileName = "/Users/rnegash/Documents/testprojects/with-redux-test/pages/session-setup.js";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__js_data_js__ = __webpack_require__("./js/data.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__js_data_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__js_data_js__);
+var _jsxFileName = "/Users/rnegash/Documents/gitprojects/with-redux-test/pages/session-setup.js";
+
 
 
 
@@ -2270,56 +2340,58 @@ function Context(_ref) {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 14
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "columns",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 15
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "column col-8 col-mx-auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 16
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h4", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 17
     }
   }, "Context selected: ", context), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "form-group",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 18
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("label", {
     className: "form-label",
     htmlFor: "input-example-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 19
     }
   }, "Nr of players"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
     min: "0",
     className: "form-input",
+    id: "numberInput",
     type: "number",
     placeholder: "Eg. 5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 22
     }
   })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", {
     className: "btn",
     style: styles.btnLogin,
-    onClick: function onClick() {
-      createPlayers(new Array(10).fill("random"));
+    onClick: function onClick(e) {
+      var val = parseInt(document.getElementById("numberInput").value);
+      createPlayers(__WEBPACK_IMPORTED_MODULE_4__js_data_js___default()(val));
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 30
     }
   }, "Start game"))));
 }
@@ -2368,7 +2440,7 @@ function mapDispatchToProps(dispatch) {
 /* unused harmony export SET_CONTEXT */
 /* unused harmony export CREATE_PLAYERS */
 /* unused harmony export reducer */
-/* harmony export (immutable) */ __webpack_exports__["c"] = setContext;
+/* unused harmony export setContext */
 /* harmony export (immutable) */ __webpack_exports__["a"] = createPlayers;
 /* harmony export (immutable) */ __webpack_exports__["b"] = initializeStore;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__("./node_modules/redux/es/index.js");
@@ -2424,7 +2496,7 @@ function initializeStore() {
 
 /***/ }),
 
-/***/ 6:
+/***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("./pages/session-setup.js");
@@ -2432,7 +2504,7 @@ module.exports = __webpack_require__("./pages/session-setup.js");
 
 /***/ })
 
-},[6])
+},[4])
           return { page: comp.default }
         })
       ;

@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { createPlayers } from "../store.js";
 import Header from "../components/Header.js";
+import generatePersona from "../js/data.js";
 
 function Context({ context, createPlayers }) {
   const styles = {
@@ -21,6 +22,7 @@ function Context({ context, createPlayers }) {
             <input
               min="0"
               className="form-input"
+              id="numberInput"
               type="number"
               placeholder="Eg. 5"
             />
@@ -28,8 +30,9 @@ function Context({ context, createPlayers }) {
           <button
             className="btn"
             style={styles.btnLogin}
-            onClick={() => {
-              createPlayers(new Array(10).fill("random"));
+            onClick={e => {
+              let val = parseInt(document.getElementById("numberInput").value);
+              createPlayers(generatePersona(val));
             }}
           >
             Start game

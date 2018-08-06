@@ -78,7 +78,7 @@ module.exports =
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _jsxFileName = "/Users/rnegash/Documents/testprojects/with-redux-test/components/Header.js";
+var _jsxFileName = "/Users/rnegash/Documents/gitprojects/with-redux-test/components/Header.js";
 
 
 var Header = function Header() {
@@ -143,7 +143,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_spectre_css_dist_spectre_icons_min_css__ = __webpack_require__("./node_modules/spectre.css/dist/spectre-icons.min.css");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_spectre_css_dist_spectre_icons_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_spectre_css_dist_spectre_icons_min_css__);
 
-var _jsxFileName = "/Users/rnegash/Documents/testprojects/with-redux-test/pages/_document.js";
+var _jsxFileName = "/Users/rnegash/Documents/gitprojects/with-redux-test/pages/_document.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -203,35 +203,28 @@ function (_Document) {
           fileName: _jsxFileName,
           lineNumber: 18
         }
-      }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("link", {
-        rel: "stylesheet",
-        href: "../css/custom.css",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 19
-        }
       })), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("body", {
         style: {
           padding: "2em 1em"
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 20
         }
       }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Header_js__["a" /* default */], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 21
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_document__["Main"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 23
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_document__["NextScript"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 24
         }
       })));
     }
