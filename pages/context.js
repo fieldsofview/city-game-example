@@ -14,6 +14,11 @@ function Context({ setContext }) {
       height: "100%"
     }
   };
+
+  const contexts = {
+    in: "India",
+    nl: "Netherlands"
+  };
   return (
     <div className="container">
       <Header />
@@ -23,10 +28,10 @@ function Context({ setContext }) {
           <Link href="/session-setup">
             <button
               className="btn"
-              onClick={() => setContext("india")}
+              onClick={() => setContext(contexts.in)}
               style={styles.btnStyle}
             >
-              India
+              {contexts.in}
             </button>
           </Link>
         </div>
@@ -36,10 +41,10 @@ function Context({ setContext }) {
           <Link href="/session-setup">
             <button
               className="btn"
-              onClick={() => setContext("netherlands")}
+              onClick={() => setContext(contexts.nl)}
               style={styles.btnStyle}
             >
-              Netherlands
+              {contexts.nl}
             </button>
           </Link>
         </div>

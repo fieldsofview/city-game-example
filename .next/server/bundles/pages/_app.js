@@ -309,7 +309,7 @@ function (_App) {
 
 
 var initialState = {
-  context: null,
+  context: "none",
   players: []
 };
 var SET_CONTEXT = "SET_CONTEXT";

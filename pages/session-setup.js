@@ -1,19 +1,19 @@
 import React from "react";
 import { connect } from "react-redux";
 import { createPlayers } from "../store.js";
+import Header from "../components/Header.js";
+
 function Context({ context, createPlayers }) {
   return (
-    <div>
-      <h1>{context}</h1>
+    <div className="container">
+      <Header />
+
+      <h4>Context selected: {context}</h4>
       <div className="form-group">
         <label className="form-label" htmlFor="input-example-1">
           Nr of players
         </label>
-        <input
-          className="form-input"
-          type="number"
-          placeholder="Nr of players"
-        />
+        <input className="form-input" type="number" placeholder="Eg. 5" />
       </div>
       <button
         className="btn"

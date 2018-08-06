@@ -3,7 +3,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import thunkMiddleware from "redux-thunk";
 
 const initialState = {
-  context: null,
+  context: "none",
   players: []
 };
 
